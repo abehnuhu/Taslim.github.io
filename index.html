@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House of Baiden | Luxury Fragrance & Skincare</title>
+    <title>House of Baiden | Premium Fragrances & Skincare - KNUST</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* CSS Reset & Base Styles */
@@ -93,6 +93,18 @@
         .btn:hover {
             background-color: var(--dark-gold);
             transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1da851;
         }
 
         /* Header & Navigation */
@@ -195,7 +207,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1590736969965-5e78249a398d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             z-index: -1;
@@ -228,117 +240,108 @@
             color: var(--soft-white);
         }
 
-        /* About Section */
-        .about {
-            background-color: var(--charcoal);
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.2rem;
-        }
-
-        /* Collections Section */
-        .collections {
+        /* Products Section */
+        .products-section {
             background-color: var(--dark-charcoal);
         }
 
-        .collection-cards {
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 40px;
             margin-bottom: 60px;
         }
 
-        .collection-card {
+        .product-card {
             background-color: rgba(255, 255, 255, 0.03);
-            padding: 40px 30px;
+            padding: 25px;
             border-top: 1px solid rgba(196, 167, 71, 0.2);
             transition: var(--transition);
+            text-align: center;
         }
 
-        .collection-card:hover {
+        .product-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
             border-top: 1px solid var(--muted-gold);
         }
 
-        .collection-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            text-align: center;
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 10px;
         }
 
-        .product-card {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .product-card:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-
-        .product-card h4 {
+        .product-card h3 {
             font-size: 1.3rem;
             margin-bottom: 8px;
             color: var(--muted-gold);
-        }
-
-        /* Product Details Section */
-        .product-details {
-            background-color: var(--charcoal);
-        }
-
-        .details-container {
+            min-height: 60px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 60px;
+            align-items: center;
             justify-content: center;
         }
 
-        .details-column {
-            flex: 1;
-            min-width: 300px;
+        .product-price {
+            font-size: 1.4rem;
+            color: var(--soft-white);
+            font-weight: 600;
+            margin: 10px 0;
         }
 
-        .details-column h3 {
+        /* Admin Panel Link */
+        .admin-link {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .admin-btn {
+            background-color: var(--muted-gold);
+            color: var(--dark-charcoal);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Location Section */
+        .location {
+            background-color: var(--charcoal);
+        }
+
+        .location-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 60px;
+            align-items: center;
+        }
+
+        .location-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .location-info h3 {
             font-size: 1.8rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: var(--muted-gold);
         }
 
-        .perfume-notes, .skincare-highlights {
-            background-color: rgba(255, 255, 255, 0.03);
-            padding: 30px;
-            margin-top: 20px;
-        }
-
-        .note-profile, .skincare-point {
-            margin-bottom: 25px;
-        }
-
-        .note-profile h4, .skincare-point h4 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .notes {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 10px;
-        }
-
-        .note {
-            padding: 8px 15px;
-            background-color: rgba(196, 167, 71, 0.1);
-            border: 1px solid rgba(196, 167, 71, 0.3);
-            font-size: 0.9rem;
+        .location-info p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
         }
 
         /* Why Choose Section */
@@ -368,48 +371,14 @@
             margin-bottom: 15px;
         }
 
-        /* Newsletter Section */
-        .newsletter {
-            background-color: var(--charcoal);
+        /* WhatsApp CTA */
+        .whatsapp-cta {
+            background-color: rgba(37, 211, 102, 0.1);
+            border: 1px solid rgba(37, 211, 102, 0.3);
+            padding: 50px 20px;
             text-align: center;
-        }
-
-        .newsletter-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .newsletter-form {
-            display: flex;
-            margin-top: 30px;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            padding: 15px 20px;
-            background-color: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--soft-white);
-            font-size: 1rem;
-        }
-
-        .newsletter-input:focus {
-            outline: none;
-            border-color: var(--muted-gold);
-        }
-
-        .contact-email {
-            margin-top: 30px;
-            font-size: 1.1rem;
-        }
-
-        .contact-email a {
-            color: var(--muted-gold);
-            text-decoration: none;
-        }
-
-        .contact-email a:hover {
-            text-decoration: underline;
+            border-radius: 10px;
+            margin-top: 40px;
         }
 
         /* Footer */
@@ -512,12 +481,9 @@
                 font-size: 2rem;
             }
 
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .newsletter-input {
-                margin-bottom: 15px;
+            .admin-link {
+                bottom: 10px;
+                right: 10px;
             }
         }
 
@@ -530,7 +496,7 @@
                 font-size: 1.8rem;
             }
 
-            .collection-cards, .benefits {
+            .products-grid, .benefits {
                 grid-template-columns: 1fr;
             }
         }
@@ -544,14 +510,12 @@
     <!-- Header & Navigation -->
     <header id="header">
         <nav class="container">
-            <a href="#" class="logo">House of <span>Baiden</span></a>
+            <a href="index.html" class="logo">House of <span>Baiden</span></a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Our Story</a></li>
-                <li><a href="#collections">Collections</a></li>
-                <li><a href="#details">Product Details</a></li>
-                <li><a href="#why">Why Choose Us</a></li>
-                <li><a href="#newsletter">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="https://wa.me/233554142949" target="_blank">Order Now</a></li>
             </ul>
             <button class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -564,172 +528,109 @@
         <div class="hero-bg"></div>
         <div class="hero-content fade-in">
             <h1>House of Baiden</h1>
-            <div class="hero-subtitle">Fragrance & Skincare House</div>
-            <p class="hero-tagline">"Elevate your senses. Nourish your skin. Experience true luxury."</p>
-            <a href="#collections" class="btn">Explore Collection</a>
+            <div class="hero-subtitle">Premium Fragrances & Skincare</div>
+            <p class="hero-tagline">"Authentic Luxury at Student-Friendly Prices. Quality You Can Trust."</p>
+            <a href="#products" class="btn">View Products</a>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
+    <!-- Products Section (Dynamically Loaded) -->
+    <section class="products-section" id="products">
         <div class="container">
             <div class="section-header">
-                <h2>Our Story</h2>
+                <h2>Our Products</h2>
+                <p>Premium fragrances and skincare available at KNUST</p>
             </div>
-            <div class="about-content fade-in">
-                <p>At House of Baiden, we craft experiences, not just products. From signature fragrances to skincare essentials, every creation is designed to inspire confidence, elegance, and a sense of ritual in your daily life.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Collections Section -->
-    <section class="collections" id="collections">
-        <div class="container">
-            <div class="section-header">
-                <h2>Collections</h2>
-            </div>
-            <div class="collection-cards">
-                <!-- Fragrances Card -->
-                <div class="collection-card fade-in">
-                    <h3>Signature Scents</h3>
-                    <div class="product-card">
-                        <h4>Noir Essence</h4>
-                        <p>A bold blend of bergamot, amber, and sandalwood. Deep, mysterious, unforgettable.</p>
-                    </div>
-                    <div class="product-card">
-                        <h4>Aurora Bloom</h4>
-                        <p>Soft florals with a hint of vanilla and musk. Elegant and uplifting.</p>
-                    </div>
-                    <div class="product-card">
-                        <h4>Velour Mist</h4>
-                        <p>Fresh citrus top notes layered with warm woods. Balanced and modern.</p>
-                    </div>
+            
+            <div id="products-container" class="products-grid">
+                <!-- Products will be loaded dynamically from localStorage -->
+                <div class="loading-message" style="text-align: center; grid-column: 1/-1; padding: 40px;">
+                    <p>Loading products...</p>
                 </div>
-                
-                <!-- Skincare Card -->
-                <div class="collection-card fade-in">
-                    <h3>Essential Skincare</h3>
-                    <div class="product-card">
-                        <h4>Radiance Serum</h4>
-                        <p>Lightweight formula with hyaluronic acid to hydrate and glow.</p>
-                    </div>
-                    <div class="product-card">
-                        <h4>Velvet Moisturizer</h4>
-                        <p>Smooth, nourishing cream that leaves skin soft and supple.</p>
-                    </div>
-                    <div class="product-card">
-                        <h4>Clarifying Cleanser</h4>
-                        <p>Gentle yet effective cleanser for a refreshed, clear complexion.</p>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="whatsapp-cta fade-in">
+                <h3><i class="fab fa-whatsapp" style="color: #25D366;"></i> Easy WhatsApp Orders</h3>
+                <p>Order any product via WhatsApp and get free delivery within KNUST campus.</p>
+                <a href="https://wa.me/233554142949?text=Hello%20House%20of%20Baiden!%20I'd%20like%20to%20place%20an%20order." class="btn btn-whatsapp" style="margin-top: 20px;">
+                    <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Product Details Section -->
-    <section class="product-details" id="details">
+    <!-- Location Section -->
+    <section class="location" id="location">
         <div class="container">
             <div class="section-header">
-                <h2>The Art Behind Every Creation</h2>
+                <h2>Our Location</h2>
             </div>
-            <div class="details-container">
-                <div class="details-column fade-in">
-                    <h3>Perfume Notes</h3>
-                    <p>Each scent is crafted with a top, heart, and base note profile for a layered experience.</p>
-                    <div class="perfume-notes">
-                        <div class="note-profile">
-                            <h4>Noir Essence</h4>
-                            <div class="notes">
-                                <span class="note">Top: Bergamot</span>
-                                <span class="note">Heart: Jasmine</span>
-                                <span class="note">Base: Sandalwood</span>
-                            </div>
-                        </div>
-                        <div class="note-profile">
-                            <h4>Aurora Bloom</h4>
-                            <div class="notes">
-                                <span class="note">Top: Pear Blossom</span>
-                                <span class="note">Heart: Vanilla Orchid</span>
-                                <span class="note">Base: White Musk</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="location-container">
+                <div class="fade-in">
+                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="KNUST Campus" class="location-image">
                 </div>
-                <div class="details-column fade-in">
-                    <h3>Skincare Highlights</h3>
-                    <p>Ingredients are selected for effectiveness and safety. Products nourish, protect, and enhance your natural glow.</p>
-                    <div class="skincare-highlights">
-                        <div class="skincare-point">
-                            <h4>Premium Formulations</h4>
-                            <p>Each product is developed with dermatologist-tested ingredients that deliver visible results.</p>
-                        </div>
-                        <div class="skincare-point">
-                            <h4>Skin-Friendly</h4>
-                            <p>Our formulas are free from parabens, sulfates, and synthetic fragrances for all skin types.</p>
-                        </div>
-                    </div>
+                <div class="location-info fade-in">
+                    <h3>Located at KNUST Campus</h3>
+                    <p><strong>Kwame Nkrumah University of Science and Technology</strong></p>
+                    <p>We're located right at KNUST, serving students, staff, and the Kumasi community.</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: var(--muted-gold); margin-right: 10px;"></i> <strong>KNUST, Kumasi</strong> - Opposite Republic Hall</p>
+                    <p><i class="fas fa-phone-alt" style="color: var(--muted-gold); margin-right: 10px;"></i> <strong>+233 55 414 2949</strong></p>
+                    <p><i class="fas fa-clock" style="color: var(--muted-gold); margin-right: 10px;"></i> <strong>Mon-Sat:</strong> 9:00 AM - 7:00 PM</p>
+                    <p><i class="fas fa-truck" style="color: var(--muted-gold); margin-right: 10px;"></i> <strong>Free Delivery</strong> within KNUST campus</p>
+                    <a href="https://wa.me/233554142949?text=Hello! I'm at KNUST and would like directions to your shop." class="btn btn-whatsapp" style="margin-top: 20px;">
+                        <i class="fab fa-whatsapp"></i> Get Directions
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Why Choose Section -->
-    <section class="why-choose" id="why">
+    <section class="why-choose">
         <div class="container">
             <div class="section-header">
-                <h2>Why House of Baiden</h2>
+                <h2>Why Choose House of Baiden?</h2>
             </div>
             <div class="benefits">
                 <div class="benefit fade-in">
-                    <i class="fas fa-gem"></i>
-                    <h3>Premium Ingredients</h3>
-                    <p>Every product is crafted using carefully sourced, high-quality ingredients from around the world.</p>
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Authentic Products</h3>
+                    <p>100% genuine perfumes and skincare. No fakes or diluted products.</p>
                 </div>
                 <div class="benefit fade-in">
-                    <i class="fas fa-spa"></i>
-                    <h3>Skin & Sense Care</h3>
-                    <p>Thoughtful formulations that elevate your daily ritual, blending skincare with sensory pleasure.</p>
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Best Prices in KNUST</h3>
+                    <p>We price-match Jiji and offer student discounts. Best value guaranteed.</p>
                 </div>
                 <div class="benefit fade-in">
-                    <i class="fas fa-crown"></i>
-                    <h3>Timeless Elegance</h3>
-                    <p>Products designed to feel luxurious, modern, and confident—created to stand the test of time.</p>
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Student-Friendly</h3>
+                    <p>Special packages and payment plans for KNUST students.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter" id="newsletter">
-        <div class="container">
-            <div class="section-header">
-                <h2>Stay Connected</h2>
-            </div>
-            <div class="newsletter-content fade-in">
-                <p>Sign up to receive exclusive updates, new launches, and seasonal collections.</p>
-                <form class="newsletter-form" id="subscribeForm">
-                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn">Subscribe</button>
-                </form>
-                <div class="contact-email">
-                    <p>Email us at <a href="mailto:info@houseofbaiden.com">info@houseofbaiden.com</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Admin Panel Link -->
+    <div class="admin-link">
+        <a href="admin.html" class="admin-btn">
+            <i class="fas fa-cog"></i> Manage Products
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <a href="#" class="logo">House of <span>Baiden</span></a>
+                <a href="index.html" class="logo">House of <span>Baiden</span></a>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/233554142949" target="_blank"><i class="fab fa-whatsapp"></i></a>
                 </div>
-                <p class="copyright">© 2023 House of Baiden. All rights reserved.</p>
+                <p class="copyright">© 2024 House of Baiden. All rights reserved.</p>
+                <p class="copyright">KNUST, Kumasi | +233 55 414 2949 | WhatsApp orders: 24/7</p>
             </div>
         </div>
     </footer>
@@ -766,31 +667,83 @@
         
         // Scroll animation
         const fadeElements = document.querySelectorAll('.fade-in');
-        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, {
-            threshold: 0.1
-        });
+        }, { threshold: 0.1 });
         
         fadeElements.forEach(el => observer.observe(el));
-        
-        // Newsletter form submission
-        document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
+
+        // Load Products from localStorage
+        function loadProducts() {
+            const container = document.getElementById('products-container');
+            const products = JSON.parse(localStorage.getItem('houseOfBaidenProducts')) || getDefaultProducts();
             
-            // In a real implementation, you would send this to your server
-            alert(`Thank you for subscribing with ${email}! You'll receive our updates soon.`);
-            this.reset();
-        });
-        
-        // Initialize with header state
-        window.dispatchEvent(new Event('scroll'));
+            container.innerHTML = '';
+            
+            if (products.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; grid-column: 1/-1; padding: 40px;">
+                        <p>No products yet. Add products in the admin panel.</p>
+                        <a href="admin.html" class="btn" style="margin-top: 20px;">
+                            <i class="fas fa-plus"></i> Add Products
+                        </a>
+                    </div>
+                `;
+                return;
+            }
+            
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card fade-in';
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-image" onerror="this.src='https://via.placeholder.com/300x300/1a1a1a/c4a747?text=Product+Image'">
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <div class="product-price">₵${product.price}</div>
+                    <a href="https://wa.me/233554142949?text=Hello! I want to order ${product.name} for ₵${product.price}" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    </a>
+                `;
+                container.appendChild(productCard);
+            });
+            
+            // Re-initialize animations for new elements
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        }
+
+        // Default products if none exist
+        function getDefaultProducts() {
+            const defaultProducts = [
+                {
+                    name: "Intense Man EDP",
+                    price: "220",
+                    description: "Masculine fragrance with woody notes",
+                    image: "https://via.placeholder.com/300x300/1a1a1a/c4a747?text=Intense+Man"
+                },
+                {
+                    name: "Explore The One",
+                    price: "200",
+                    description: "Fresh citrus with aquatic notes",
+                    image: "https://via.placeholder.com/300x300/1a1a1a/c4a747?text=Explore+The+One"
+                },
+                {
+                    name: "Berries EDP",
+                    price: "190",
+                    description: "Sweet berry fragrance",
+                    image: "https://via.placeholder.com/300x300/1a1a1a/c4a747?text=Berries+EDP"
+                }
+            ];
+            
+            localStorage.setItem('houseOfBaidenProducts', JSON.stringify(defaultProducts));
+            return defaultProducts;
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', loadProducts);
     </script>
 </body>
 </html>
